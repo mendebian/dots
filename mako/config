@@ -1,0 +1,22 @@
+# ~/.config/mako/config
+
+# Localização no canto superior direito
+anchor=top-right
+
+# Largura e altura máxima
+width=300
+height=150
+
+# Estilo visual
+background-color=#333333FF
+text-color=#FFFFFFFF
+border-size=2
+border-color=#4C7899FF
+border-radius=5
+
+# Fonte e formato
+font=Monospace 10
+format=<b>%s</b>\n%b
+
+# Tempo limite padrão (5 segundos)
+default-timeout=5000

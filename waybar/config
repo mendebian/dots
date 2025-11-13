@@ -1,0 +1,44 @@
+{
+    "layer": "top",
+    "position": "top",
+
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/window"],
+    "modules-right": ["group/status"],
+
+    "hyprland/workspaces": {
+        "all-outputs": true,
+        "active-only": false
+    },
+
+    "custom/window": {
+        "exec": "~/.config/waybar/scripts/window.sh",
+        "interval": 1,
+        "format": "{}",
+        "tooltip": false
+    },
+    
+    "group/status": {
+        "orientation": "horizontal",
+        "modules": ["pulseaudio", "battery", "clock"]
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+        "format-icons": ["", ""],
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "on-click": "pavucontrol"
+    },
+    
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    }
+}
